@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student List</title>
+    <style>
+    body{
+    background:#FBD5F1;
+    }
+table{
+    width: 900px;
+    margin-left: 15%;
+    margin-top: 4%;
+    margin-bottom: 8%;
+}
+th, caption{
+    text-align: left;
+}
+table, th, td{
+    border: solid 1px #f75dce;
+    border-collapse: collapse;
+}
+th, td{
+    padding: 10px;
+}
+tr:nth-child(even){
+    background-color:  #FBD5F1; 
+}
+tr:nth-child(odd){
+    background-color:rgb(255, 255, 255);
+}
+
+ </style>
+</head>
+<body>
+   <center> <h1>Courses List</h1> </center>
+    <table>   
+        <tr>
+            <th>Course Name</th>
+            <th>Course Code</th>
+            <th>Trainer</th>
+            <th>Course Description</th>
+            <th>Stack</th>
+            <th>Course Material</th>
+            <th>Course Duration</th>
+        </tr>
+        {%for course in courses%}
+        <tr>
+            <td>{{course.course_name}}</td>
+            <td>{{course.course_code}}</td>
+            <td>{{course.trainer}}</td>
+            <td>{{course.course_description}}</td>
+            <td>{{course.stack}}</td>
+            <td>{{course.course_material}}</td>
+            <td>{{course.course_duration}}</td>
+           
+        </tr>
+        {%endfor%}
+    </table>
+    
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student List</title>
+    <style>
+ body{
+    background:#FBD5F1;
+    }
+table{
+    width: 900px;
+    margin-left:5%;
+    margin-right: 5%;
+    margin-top: 4%;
+    margin-bottom: 8%;
+}
+th, caption{
+    text-align: left;
+}
+table, th, td{
+    border: solid 1px #f75dce;
+    border-collapse: collapse;
+}
+th, td{
+    padding: 10px;
+}
+tr:nth-child(even){
+    background-color:  #FBD5F1; 
+}
+tr:nth-child(odd){
+    background-color:rgb(255, 255, 255);
+}
+
+
+</style>
+</head>
+<body>
+    <center><h1>Trainers List</h1></center>
+    <div class="list">
+    <table>   
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Profile </th>
+            <th>Gender</th>
+            <th>Phone Number</th>
+            <th>Email</th>
+           
+            <th>Contract</th>
+            <th>Resume</th>
+            <th>Salary</th>
+            <th>Syllabus</th>
+            <th>Company</th> 
+        </tr>
+        {%for trainer in trainers%}
+        <tr>
+            <td>{{trainer.first_name}}</td>
+            <td>{{trainer.last_name}}</td>
+
+            {% if trainer.profile_pic %}
+            <td> <img src="{{trainer.profile_pic.url}}"></td>
+            {% endif %}
+
+            <td>{{trainer.gender}}</td>
+            <td>{{trainer.phone_number}}</td>
+            <td>{{trainer.email_address}}</td>
+            <td>{{trainer.contract}}</td>
+            <td>{{trainer.resume}}</td>
+            <td>{{trainer.salary}}</td>
+            <td>{{trainer.syllabus}}</td>
+            <td>{{trainer.company}}</td>
+        </tr>
+        {%endfor%}
+    </table>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student List</title>
+    <style>
+ body{
+    background:#FBD5F1;
+    }
+table{
+    width: 900px;
+    margin-left: 15%;
+    margin-top: 4%;
+    margin-bottom: 8%;
+}
+th, caption{
+    text-align: left;
+}
+table, th, td{
+    border: solid 1px #f75dce;
+    border-collapse: collapse;
+}
+th, td{
+    padding: 10px;
+}
+tr:nth-child(even){
+    background-color:  #FBD5F1; 
+}
+tr:nth-child(odd){
+    background-color:rgb(255, 255, 255);
+}
+
+    </style>
+</head>
+<body>
+   <center><h1>Student List</h1></center> 
+    <table>   
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Nationality</th>
+            <th>Phone Number</th>
+            <th>Profile Picture</th>
+            <th>National Id</th>
+            <th>Email</th>
+            <th>Academic Level</th>
+            <th>Admission Date</th>
+            <th>District</th>
+            <th>Laptop Serial Number</th>
+        </tr>
+        {%for student in students%}
+        <tr>
+            <td>{{student.first_name}}</td>
+            <td>{{student.last_name}}</td>
+            <td>{{student.age}}</td>
+            <td>{{student.gender}}</td>
+            <td>{{student.nationality}}</td>
+            <td>{{student.phone_number}}</td>
+            <td>{{student.profile_pic}}</td>
+            <td>{{student.national_id}}</td>
+            <td>{{student.email_address}}</td>
+            <td>{{student.academic_level}}</td>
+            <td>{{student.admission_date}}</td>
+            <td>{{student.district}}</td>
+            <td>{{student.laptop_serial_number}}</td>
+        </tr>
+        {%endfor%}
+    </table>
+    
+</body>
+</html>
