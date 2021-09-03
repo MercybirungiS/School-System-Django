@@ -38,6 +38,8 @@ tr:nth-child(odd){
    <center><h1>Student List</h1></center> 
     <table>   
         <tr>
+            <th>Profile</th>
+            <th>Delete</th>
             <th>First Name</th>
             <th>Last Name</th>
             <th>Age</th>
@@ -54,6 +56,8 @@ tr:nth-child(odd){
         </tr>
         {%for student in students%}
         <tr>
+            <td> <a href="href={%url 'edit_profile' id=student.id%}">Edit Profile</a> </td>
+
             <td>{{student.first_name}}</td>
             <td>{{student.last_name}}</td>
             <td>{{student.age}}</td>

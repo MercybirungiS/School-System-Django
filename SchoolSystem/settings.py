@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'calendaR',
     'trainer',
     'courses',
+    'cool',
 
 ]
 

@@ -22,5 +22,6 @@ urlpatterns = [
     path('courses/',include("courses.urls")),
     path('trainer/',include("trainer.urls")),
     path('student/' ,include ("student.urls")),
-     path('calendaR/', include('calendaR.urls')),
+    path('calendaR/', include('calendaR.urls')),
+    path('',include("cool.urls")),
 ]

@@ -17,9 +17,18 @@ Calendar
 
 {% block content %}
 
+<div class="clearfix">
+	<a class="btn btn-info left" href="{{ prev_month }}"> Previous Month </a>
+	<a class="btn btn-info right" href="{{ next_month }}"> Next Month </a>
+	<a class="btn btn-info right" href="{event_new "> New Event </a>
+</div>
 
 {{ calendar }}
 {% endblock %}
+
+
+
+
     <style>
    /* Common styles */
 body {
